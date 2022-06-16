@@ -18,3 +18,146 @@
 body {
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+}
+/* --------- start of header section --------- */
+header {
+  padding: 1rem 1.5rem;
+  display: relative;
+}
+
+header div:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.3rem 0; */
+  margin-bottom: 0.3rem;
+}
+
+header div .user {
+  display: none;
+}
+
+header div h1 {
+  order: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #22202e;
+}
+
+header .header-icons i {
+  margin-left: 0.7rem;
+  color: #22202e;
+}
+
+header hr {
+  background-color: #f1eff8;
+  border: 0.5px solid #f1eff8;
+}
+nav {
+  padding: 2rem 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: slide 1s forwards;
+  /* display: none; */
+  z-index: 10;
+}
+
+@keyframes slide {
+  0% {
+    top: -40px;
+  }
+  100% {
+    top: 4rem;
+  }
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #726e8d;
+  position: relative;
+  width: 100%;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: #e4e0f1;
+  bottom: -50%;
+  left: 0;
+  height: 0.1rem;
+}
+.fa-bars {
+  transition: all 0.3s ease-in-out;
+}
+
+.rotate-menu {
+  transform: rotateZ(90deg);
+  transition: all 0.3s ease-in-out;
+}
+/* --------- end of header section ---------- */
+/* ------ media queries ------ */
+@media screen and (min-width: 992px) {
+  header div h1 {
+    font-size: 2rem;
+  }
+
+  header div .user {
+    display: block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    position: sticky;
+    top: 0;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
