@@ -25,6 +25,7 @@ a {
 
 /* --------- start of header section --------- */
 header {
+  background-color: #fff;
   padding: 1rem 1.5rem;
   position: relative;
 }
@@ -176,7 +177,7 @@ nav ul li a::after {
     justify-content: space-around;
     width: 50%;
     margin: 0 auto;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   nav ul li a {
@@ -221,7 +222,7 @@ nav ul li a::after {
     justify-content: space-around;
     width: 42%;
     margin: 0 auto;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -315,13 +316,11 @@ nav ul li a::after {
   }
 }
 
-
 /* Introduction style X large screen */
 @media (min-width: 1200px) {
   #intro {
     height: 70vh;
     margin: 2rem;
-
   }
 
   #intro img {
@@ -388,7 +387,6 @@ nav ul li a::after {
   margin: 1.2rem 0;
 }
 
-
 .card i {
   font-size: 1.2rem;
 }
@@ -447,9 +445,7 @@ nav ul li a::after {
   #information h4 span::before {
     white-space: normal;
   }
-
 }
-
 
 /* Information style X large screen */
 @media (min-width: 1200px) {
@@ -478,7 +474,6 @@ nav ul li a::after {
     font-size: 0.8rem;
   }
 
-
   #information h4 {
     text-align: center;
   }
@@ -505,7 +500,7 @@ footer .container {
   row-gap: 3rem;
 }
 
-footer .container div>* {
+footer .container div > * {
   width: 100%;
 }
 
