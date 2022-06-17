@@ -22,6 +22,7 @@ body {
 a {
   text-decoration: none;
 }
+
 /* --------- start of header section --------- */
 header {
   padding: 1rem 1.5rem;
@@ -56,6 +57,7 @@ header .header-icons i {
 header hr {
   display: none;
 }
+
 nav {
   background-color: white;
   padding: 2rem 0.5rem;
@@ -69,6 +71,7 @@ nav {
 .slide-in {
   animation: slide 1s forwards;
 }
+
 .slide-out {
   animation: slideOut 1s forwards;
 }
@@ -78,6 +81,7 @@ nav {
     opacity: 0;
     top: 3px;
   }
+
   100% {
     opacity: 1;
     top: 3.56rem;
@@ -141,6 +145,7 @@ nav ul li a::after {
   transform: rotateZ(90deg);
   transition: all 0.3s ease-in-out;
 }
+
 /* ------ header media queries ------ */
 @media screen and (min-width: 992px) {
   header hr {
@@ -148,6 +153,7 @@ nav ul li a::after {
     background-color: #f1eff8;
     border: 0.5px solid #f1eff8;
   }
+
   header div h1 {
     font-size: 2rem;
   }
@@ -176,6 +182,7 @@ nav ul li a::after {
   nav ul li a {
     width: auto;
   }
+
   nav ul li a::after {
     display: none;
     height: 0.15rem;
@@ -208,6 +215,7 @@ nav ul li a::after {
     display: block;
     position: relative;
   }
+
   nav ul {
     flex-direction: row;
     justify-content: space-around;
@@ -216,6 +224,7 @@ nav ul li a::after {
     font-size: 0.9rem;
   }
 }
+
 /* --------- end of header section ---------- */
 /*Introduction style section starts*/
 #intro {
@@ -264,47 +273,45 @@ nav ul li a::after {
 }
 
 /*Introduction style section ends*/
-/*  Intro & information style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .intro-detail {
-      padding: 3rem 2rem;
+    padding: 3rem 2rem;
   }
 }
 
 /* Introduction style large screen laptop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
   #intro {
-      margin: 2.5rem;
-      height: 65vh;
+    margin: 2.5rem;
+    height: 65vh;
   }
 
   #intro img {
-      order: 3;
-      display: block;
+    order: 3;
+    display: block;
   }
 
   .intro-detail {
-      padding-left: 2rem;
-      display: flex;
-      align-items: flex-start;
+    padding-left: 2rem;
+    display: flex;
+    align-items: flex-start;
   }
 
   .intro-detail h2 {
-      font-size: 1.8rem;
-      padding: 0 3rem 1rem 0;
+    font-size: 1.8rem;
+    padding: 0 3rem 1rem 0;
   }
 
   .intro-detail p {
-      font-size: 1rem;
-      order: 2;
-      padding: 3rem 2rem 0 0;
+    font-size: 1rem;
+    order: 2;
+    padding: 3rem 2rem 0 0;
   }
 
   .intro-detail a {
-      padding: 0.9rem 0;
-      order: 1;
-      width: 25%;
+    padding: 0.9rem 0;
+    order: 1;
+    width: 25%;
   }
 }
 
@@ -312,47 +319,175 @@ nav ul li a::after {
 /* Introduction style X large screen */
 @media (min-width: 1200px) {
   #intro {
-      height: 70vh;
-      margin: 2rem;
+    height: 70vh;
+    margin: 2rem;
 
   }
 
   #intro img {
-      order: 3;
-      display: block;
+    order: 3;
+    display: block;
   }
 
   .intro-detail {
-      padding: 0 2rem;
-      padding-left: 2.5rem;
-      display: flex;
-      align-items: flex-start;
+    padding: 0 2rem;
+    padding-left: 2.5rem;
+    display: flex;
+    align-items: flex-start;
   }
 
   .intro-detail h2 {
-      font-size: 1.5rem;
-      width: 70%;
-      padding: 0 0 2rem 0;
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 0 0 2rem 0;
   }
 
   .intro-detail p {
-      font-size: 1rem;
-      width: 84%;
-      order: 2;
-      padding: 8rem 0 0 0;
+    font-size: 1rem;
+    width: 84%;
+    order: 2;
+    padding: 8rem 0 0 0;
   }
 
   .intro-detail a {
-      font-size: 0.8rem;
-      padding: 0.8rem 0;
-      order: 1;
-      width: 18%;
+    font-size: 0.8rem;
+    padding: 0.8rem 0;
+    order: 1;
+    width: 18%;
   }
 
   .intro-detail a:hover {
-      background: #f9f9f981;
+    background: #f9f9f981;
   }
 }
+
+/*Information style section starts*/
+#information {
+  margin: 2rem 0;
+  color: var(--dark-primary);
+}
+
+#information h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+#information h4 span::before {
+  content: '\A';
+  white-space: pre;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.card {
+  margin: 1.2rem 0;
+}
+
+
+.card i {
+  font-size: 1.2rem;
+}
+
+.card h5 {
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/*Information style section ends*/
+
+/*  Information style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 1rem 2rem;
+    width: 40%;
+  }
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+}
+
+/* Information style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #information {
+    margin: 2.5rem;
+  }
+
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 1rem 3rem;
+    width: 40%;
+  }
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+
+}
+
+
+/* Information style X large screen */
+@media (min-width: 1200px) {
+  #information {
+    margin: 2rem;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .card {
+    margin-right: 5.5rem;
+    width: 20%;
+  }
+
+  .card i {
+    font-size: 0.85rem;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+}
+
 /* Footer style starts */
 
 footer {
@@ -370,7 +505,7 @@ footer .container {
   row-gap: 3rem;
 }
 
-footer .container div > * {
+footer .container div>* {
   width: 100%;
 }
 
@@ -465,6 +600,7 @@ footer .copy hr {
   html {
     font-size: 20px;
   }
+
   footer .container .social ul li {
     justify-content: flex-start;
   }
