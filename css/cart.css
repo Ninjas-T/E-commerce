@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -17,6 +17,9 @@
 
 body {
   scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  height: 100vh;
+  position: relative;
 }
 
 a {
@@ -120,7 +123,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   background-color: #e4e0f1;
@@ -165,7 +168,7 @@ nav ul li a::after {
     justify-content: space-around;
     width: 50%;
     margin: 0 auto;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   nav ul li a {
@@ -212,6 +215,174 @@ nav ul li a::after {
   }
 }
 /* --------- end of header section ---------- */
+
+/* --------- start of main  section ---------- */
+
+main {
+  width: 92%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+#card-container {
+  border-bottom: #cac6da 1px solid;
+}
+
+#card-container .card {
+  display: flex;
+  margin: 30px 0;
+}
+#card-container .card div {
+  padding: 5px 8px;
+}
+.card-img {
+  display: inline;
+  width: 133px;
+  height: 166px;
+}
+.card-title {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--dark-primary);
+}
+.card-description {
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 6px;
+  color: var(--dark-primary);
+  max-width: 300px;
+}
+.card-total {
+  color: var(--dark-primary);
+}
+.card-total span {
+  color: #868392;
+}
+
+.quantity-container {
+  display: flex;
+  width: 122px;
+  height: 46px;
+  justify-content: space-around;
+}
+
+.quantity-increase,
+.quantity-decrease {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding-top: 1px;
+  cursor: pointer;
+  background-color: rgba(210, 207, 201, 0.546);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: var(--dark-primary);
+}
+
+#subtotal-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+}
+#subtotal-text {
+  margin-right: 12px;
+  font-size: 20px;
+  color: var(--primary);
+  padding-top: 2px;
+  font-weight: 500;
+}
+#subtotal-num {
+  margin-right: 7px;
+  font-size: 24px;
+  color: var(--dark-primary);
+}
+p#taxes-and-shpping {
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: right;
+  color: var(--primary);
+}
+button {
+  width: 100%;
+  padding: 16px 32px 16px 32px;
+  background-color: var(--dark-primary);
+  margin-top: 50px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 70px;
+  display: block;
+}
+
+/*  main style mediam screen tablet */
+@media (min-width: 768px) {
+  main {
+    width: 85%;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  button {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-description {
+    font-size: 16px;
+  }
+}
+
+/* main style large screen laptop */
+@media (min-width: 992px) {
+  section#subtotal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  button {
+    width: 172px;
+    margin-right: 5px;
+    margin-top: 15px;
+  }
+  div.card-inner-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card-description {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  .quantity-container {
+    margin-top: 35px;
+  }
+  .card-total {
+    padding-top: 40px;
+  }
+}
+
+/* main style X large screen */
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 28px;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-description {
+    font-size: 18px;
+    max-width: 450px;
+  }
+}
+/* --------- end of main  section ---------- */
 
 /* Footer style starts */
 
