@@ -312,6 +312,7 @@ nav ul li a::after {
   .intro-detail a {
     padding: 0.9rem 0;
     order: 1;
+    font-size: 0.7rem;
     width: 25%;
   }
 }
@@ -320,7 +321,7 @@ nav ul li a::after {
 @media (min-width: 1200px) {
   #intro {
     height: 70vh;
-    margin: 2rem;
+    margin: 0 6rem 0;
   }
 
   #intro img {
@@ -423,9 +424,9 @@ nav ul li a::after {
 
 /* Information style large screen laptop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  #information {
+  /* #information {
     margin: 2.5rem;
-  }
+  } */
 
   .container {
     justify-content: center;
@@ -450,7 +451,7 @@ nav ul li a::after {
 /* Information style X large screen */
 @media (min-width: 1200px) {
   #information {
-    margin: 2rem;
+    margin: 2rem 5rem;
   }
 
   .container {
@@ -458,8 +459,8 @@ nav ul li a::after {
   }
 
   .card {
-    margin-right: 5.5rem;
-    width: 20%;
+    margin-right: 4rem;
+    width: 100%;
   }
 
   .card i {
@@ -471,7 +472,7 @@ nav ul li a::after {
   }
 
   .card p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   #information h4 {
