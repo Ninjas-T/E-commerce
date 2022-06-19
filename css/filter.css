@@ -328,12 +328,11 @@ footer .copy hr {
 
 /*  Footer style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  html {
-    font-size: 20px;
-  }
+
   footer .container .social ul li {
     justify-content: flex-start;
   }
+  
 }
 
 /* Footer style large screen laptop */
