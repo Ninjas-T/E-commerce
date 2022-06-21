@@ -219,6 +219,299 @@ nav ul li a::after {
 }
 /* --------- end of header section ---------- */
 
+/* --------- starts of details section ---------*/
+
+#details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#details > div {
+  width: 100%;
+}
+
+#details > div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+
+#details > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+#details .name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#details .name h1 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+#details .name span {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#details .description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#details .description h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#details .description p {
+  font-weight: 300;
+}
+
+#details .description ul {
+  padding: 1rem 2rem;
+  font-weight: 300;
+}
+
+#details .hwd {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#details .hwd h3 {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+#details .hwd > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#details .hwd > div div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: calc(95% / 3);
+  position: relative;
+  gap: 1rem;
+}
+
+#details .hwd > div div:nth-child(1) {
+  align-items: flex-start;
+}
+
+#details .hwd > div div:nth-child(3) {
+  align-items: flex-end;
+}
+
+#details .hwd > div div span {
+  text-transform: capitalize;
+}
+
+#details .hwd > div div:nth-child(2)::before {
+  background-color: var(--light-grey);
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  left: 0;
+  top: 0;
+}
+
+#details .hwd > div div:nth-child(2)::after {
+  background-color: var(--light-grey);
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  right: 0;
+  top: 0;
+}
+
+#details .amount {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#details .amount h3 {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+#details .amount > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#details .amount > div div {
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  gap: 2rem;
+}
+
+#details .amount div span {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+#details > div:nth-child(2) button {
+  background-color: var(--dark-primary);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  color: var(--white);
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+#details > div:nth-child(2) button:hover {
+  background-color: #404358;
+}
+
+/*  details section style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #details > div:nth-child(2) {
+    padding: 1.5rem 3rem;
+  }
+}
+
+/* details section style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html #details{
+    font-size: 14px;
+  }
+  #details {
+    flex-wrap: nowrap;
+  }
+
+  #details > div {
+    width: 50%;
+  }
+
+  #details > div:nth-child(2) {
+    padding: 4rem;
+  }
+
+  #details .name h1 {
+    font-size: 2rem;
+  }
+
+  #details .hwd > div {
+    width: 70%;
+  }
+
+  #details .hwd > div div:nth-child(2)::before {
+    display: none;
+  }
+  
+  #details .hwd > div div:nth-child(2)::after {
+    display: none;
+  }
+
+  #details .amount {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #details .amount > div {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #details .amount > div div{
+    padding: 0.6rem 1rem;
+    width: auto;
+  }
+
+  #details > div:nth-child(2) button {
+    padding: 0.8rem 1rem;
+    width: auto;
+  } 
+}
+
+/* details section style X large screen */
+@media (min-width: 1200px) {
+
+  html #details{
+    font-size: 14px;
+  }
+  #details {
+    flex-wrap: nowrap;
+  }
+
+  #details > div {
+    width: 50%;
+  }
+
+  #details > div:nth-child(2) {
+    padding: 4rem;
+  }
+
+  #details .name h1 {
+    font-size: 2rem;
+  }
+
+  #details .hwd > div {
+    width: 70%;
+  }
+
+  #details .hwd > div div:nth-child(2)::before {
+    display: none;
+  }
+  
+  #details .hwd > div div:nth-child(2)::after {
+    display: none;
+  }
+
+  #details .amount {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #details .amount > div {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #details .amount > div div{
+    padding: 0.6rem 1rem;
+    width: auto;
+  }
+
+  #details > div:nth-child(2) button {
+    padding: 0.8rem 1rem;
+    width: auto;
+  } 
+
+}
+
+/* --------- ends of details section ---------*/
+
 /* Footer style starts */
 
 footer {
@@ -328,16 +621,16 @@ footer .copy hr {
 
 /*  Footer style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  html {
-    font-size: 20px;
-  }
+
   footer .container .social ul li {
     justify-content: flex-start;
   }
+
 }
 
 /* Footer style large screen laptop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
   footer .container {
     display: grid;
     grid-template-columns: 1fr 1.5fr repeat(3, 1fr);
@@ -359,6 +652,7 @@ footer .copy hr {
   footer .copy {
     justify-content: flex-start;
   }
+
 }
 
 /* Footer style X large screen */
