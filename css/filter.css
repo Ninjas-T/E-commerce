@@ -142,7 +142,236 @@ nav ul li a::after {
   transform: rotateZ(90deg);
   transition: all 0.3s ease-in-out;
 }
+
+/* --------- end of header section ---------- */
+
+/* ---------- start of filter section -------- */
+main .bg {
+  position: relative;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 5rem;
+  margin-bottom: 1rem;
+}
+
+main .bg img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+main .bg h2 {
+  color: white;
+  font-weight: 300;
+}
+
+main .filter-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: var(--dark-primary);
+  margin-bottom: 1rem;
+}
+
+main .filter-lists i {
+  color: var(--dark-primary);
+  margin-left: 0.4rem;
+}
+
+main .filter-lists .filters {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+main .filter-lists .filters li {
+  margin: 0.5rem;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--dark-primary);
+}
+
+main .filter-lists .filters .list {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+main .filter-lists .filters .list li {
+  padding: 0;
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+main .filter-lists .filters .list li:hover {
+  background-color: var(--dark-primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-lists .search {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+}
+
+.filter-lists .search input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  margin-right: 0.3rem;
+  border: solid var(--border-dark) 0.5px;
+}
+
+.filter-lists .search input::placeholder {
+  font-weight: 400;
+}
+
+.filter-lists .search i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#view-collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#view-collection button {
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--light-grey);
+  color: var(--dark-primary);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#view-collection button:hover {
+  background-color: var(--dark-primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+main section {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+main section .card {
+  width: 45%;
+  margin-bottom: 2rem;
+}
+
+main section .card div:nth-child(1) {
+  width: 100%;
+  height: 12rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+main section .card div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+
+main section .card .overlay {
+  background-color: rgb(34, 32, 46, 0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(90deg);
+  transform-origin: top left;
+  transition: all 0.25s ease-in-out;
+}
+
+main section .card .overlay button {
+  font-size: 0.7rem;
+  padding: 0.8rem 1rem;
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+  border: none;
+  cursor: pointer;
+}
+
+main section .card .overlay button:hover {
+  background-color: var(--dark-primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+main section .card div:nth-child(2) h3 {
+  margin-bottom: 0.7rem;
+}
+
+main section .card div:nth-child(2) h4 {
+  font-weight: 700;
+}
+
+main section .card div:nth-child(2) h3,
+h4 {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #3e3667;
+}
 /* ------ header media queries ------ */
+@media screen and (min-width: 750px) {
+  main section .card {
+    width: 30%;
+  }
+  main .filter-lists {
+    padding: 1rem 1.3rem;
+  }
+
+  .filter-lists .search {
+    width: 35%;
+  }
+  main .filter-lists .filters {
+    font-size: 1rem;
+  }
+  .filter-lists .search input::placeholder {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
 @media screen and (min-width: 992px) {
   header hr {
     display: block;
@@ -202,6 +431,31 @@ nav ul li a::after {
   .active::after {
     display: block;
   }
+
+  /* ---- start of filter section ---- */
+  main .bg {
+    height: 9rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  main .bg h2 {
+    font-size: 2.2rem;
+  }
+  main section .card .overlay button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  main .filter-lists .filters {
+    font-size: 1.1rem;
+  }
+
+  .filter-lists .search {
+    width: 30%;
+  }
+  /* ---- end of filter section ----- */
 }
 
 @media screen and (min-width: 1200px) {
@@ -216,8 +470,40 @@ nav ul li a::after {
     margin: 0 auto;
     font-size: 1rem;
   }
+
+  main .bg {
+    padding: 1rem 5rem;
+  }
+
+  main section {
+    padding: 1rem 4rem;
+  }
+
+  main section .card {
+    width: 21%;
+  }
+
+  main section .card div:nth-child(1) {
+    height: 16rem;
+  }
+
+  main section .card .overlay button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  main section .card div:nth-child(2) h3,
+  h4 {
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
 }
-/* --------- end of header section ---------- */
+
+@media (min-width: 1400px) {
+  main section .card div:nth-child(1) {
+    height: 20rem;
+  }
+}
+/* ---------- end of filter section --------- */
 
 /* Footer style starts */
 
@@ -328,11 +614,9 @@ footer .copy hr {
 
 /*  Footer style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
   footer .container .social ul li {
     justify-content: flex-start;
   }
-  
 }
 
 /* Footer style large screen laptop */
