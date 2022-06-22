@@ -29,6 +29,7 @@ function navDisplay(e) {
 
 let amountMinus = document.querySelector(`.amount div div span:nth-child(1)`);
 let amountPlus = document.querySelector(`.amount div div span:nth-child(3)`);
+let itemImg = document.querySelector(`#details div:nth-child(1) img`);
 let itemDescription = document.querySelector(`.description p`);
 let addToCartBtn = document.querySelector(`.amount button`);
 let itemPrice = document.querySelector(`.name span`);
@@ -60,6 +61,7 @@ fetch(`../API/data.json`)
 
   for (let i = 0; i < dataArray.length; i++) {
     if (item.toLowerCase() === (dataArray[i][`title`]).toLowerCase()) {
+      itemImg.src = dataArray[i][`img-src`];
       itemName.textContent = dataArray[i][`title`];
       itemPrice.textContent = `$${dataArray[i][`price`]}`
       itemDescription.textContent = dataArray[i][`description`];
@@ -70,6 +72,7 @@ fetch(`../API/data.json`)
     let count = 0;
     let item =
     {
+      'img-src' : itemImg.src,
       'title' : itemName.textContent.toLowerCase(),
       'price' : itemPrice.textContent.toLowerCase(),
       'description' : itemDescription.textContent.toLowerCase(),
