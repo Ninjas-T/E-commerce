@@ -26,7 +26,7 @@ let newContainer = document.querySelector(`#new-products .container`);
 // ============== Popular products ==================
 let popularProducts = document.querySelector(`#popular-products .container`);
 
-fetch("../API/data.json")
+fetch(`./API/data.json`)
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < 4; i++) {
