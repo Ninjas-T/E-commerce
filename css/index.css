@@ -822,6 +822,184 @@ nav ul li a::after {
 }
 
 /*Popular products section style ends*/
+/*Sign up section style starts*/
+#sign-up {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem 2rem;
+}
+
+#sign-up .container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#sign-up .join-us {
+  width: 100%;
+  padding-bottom: 3.5rem;
+}
+
+#sign-up .join-us h4 {
+  color: var(--dark-primary);
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+#sign-up .join-us p {
+  width: 100%;
+  color: var(--dark-primary);
+  font-size: 0.8rem;
+}
+
+#sign-up form {
+  align-self: center;
+}
+
+#sign-up form input {
+  border: 0;
+  padding: 1.2rem 2rem;
+  background-color: var(--light-grey);
+}
+
+#sign-up form input::placeholder {
+  opacity: 0.3;
+  font-size: 0.7rem;
+}
+
+#sign-up form button {
+  font-size: 0.9rem;
+  font-weight: 200;
+  border: 0;
+  padding: 1.2rem 2rem;
+  color: var(--white);
+  background-color: var(--dark-primary);
+}
+
+/*Sign up section media query for mediam screen tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #sign-up .container {
+    text-align: center;
+    align-items: center;
+  }
+
+  #sign-up .join-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sign-up .join-us h4 {
+    font-size: 1.5rem;
+  }
+
+  #sign-up .join-us p {
+    width: 45%;
+  }
+}
+
+/*Sign up section media query for large screen tablet*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-grey);
+  }
+
+  #sign-up .container {
+    width: 95%;
+    height: 360px;
+    background-color: var(--white);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  #sign-up .join-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sign-up .join-us h4 {
+    font-size: 1.7rem;
+  }
+
+  #sign-up .join-us p {
+    width: 40%;
+  }
+
+  #sign-up form input {
+    padding: 1rem 4rem 0.85rem 1.5rem;
+  }
+
+  #sign-up form input::placeholder {
+    opacity: 0.3;
+  }
+
+  #sign-up form button {
+    padding: 1rem 2rem;
+  }
+}
+
+/*Sign up section media query for X large screen tablet*/
+@media (min-width: 1200px) {
+  #sign-up {
+    padding: 3rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-grey);
+  }
+
+  #sign-up .container {
+    padding: 4rem 0;
+    background-color: var(--white);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sign-up .join-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  #sign-up .join-us h4 {
+    font-size: 1.7rem;
+  }
+
+  #sign-up .join-us p {
+    width: 80%;
+  }
+
+  #sign-up form input {
+    padding: 0.85rem 4rem 0.85rem 1.5rem;
+  }
+
+  #sign-up form input::placeholder {
+    opacity: 0.3;
+  }
+
+  #sign-up form button {
+    padding: 0.85rem 2rem;
+  }
+}
+
+/*Sign up section style ends*/
+/*Footer section style starts*/
 footer {
   background-color: var(--dark-primary);
   padding: 3rem 2rem 1rem;
@@ -988,4 +1166,4 @@ footer .copy hr {
   }
 }
 
-/* Footer style ends */
+/* Footer section style ends */
