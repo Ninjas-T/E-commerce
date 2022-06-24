@@ -234,7 +234,7 @@ nav ul li a::after {
 
 #details > div:nth-child(1) img {
   width: 100%;
-  height: 100%;
+  height: 30rem;
 }
 
 #details > div:nth-child(2) {
@@ -394,6 +394,10 @@ nav ul li a::after {
   #details > div:nth-child(2) {
     padding: 1.5rem 3rem;
   }
+
+  #details > div:nth-child(1) img {
+    height: 35rem;
+  }
 }
 
 /* details section style large screen laptop */
@@ -449,7 +453,11 @@ nav ul li a::after {
   #details > div:nth-child(2) button {
     padding: 0.8rem 1rem;
     width: auto;
-  } 
+  }
+
+  #details > div:nth-child(1) img {
+    height: 42rem;
+  }
 }
 
 /* details section style X large screen */
@@ -508,9 +516,218 @@ nav ul li a::after {
     width: auto;
   } 
 
+  #details > div:nth-child(1) img {
+    height: 45rem;
+  }
+
 }
 
 /* --------- ends of details section ---------*/
+
+/* --------- starts of suggestion section ---------*/
+
+#suggestion {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+}
+
+#suggestion h1 {
+  font-weight: 400;
+}
+
+#suggestion .container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#suggestion > * {
+  width: 100%;
+}
+
+#suggestion .container .card div:nth-child(1) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#suggestion .container .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 32, 46, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(90deg);
+  transform-origin: top left;
+  transition: all 0.25s ease-in-out;
+}
+
+#suggestion .container .card:hover .bg{
+  transform: rotateX(0deg);
+}
+
+#suggestion .container .card .bg a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  padding: 0.8rem 1rem;
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+  border: 0;
+  cursor: pointer;
+}
+
+#suggestion .container .card .bg a:hover {
+  background-color: var(--dark-primary);
+  color: var(--white);
+  transition: all 0.2s ease-in-out;
+}
+
+#suggestion .container .card div img {
+  width: 100%;
+  height: 12rem;
+}
+
+#suggestion .container .card h3 {
+  font-weight: 400;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+#suggestion .container .card h4 {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+#suggestion > a {
+  padding: 0.8rem;
+  border: 0;
+  background-color: var(--light-grey);
+  color: var(--dark-primary);
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#suggestion > a:hover {
+  background-color: var(--dark-primary);
+  color: var(--white);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Suggestion section style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  #suggestion {
+    padding: 0 3rem;
+  }
+
+  #suggestion .container {
+    gap: 1.5rem;
+  }
+
+  #suggestion .container .card div img {
+    height: 22rem;
+  }
+
+  #suggestion .container .card h3 {
+    font-size: 1rem;
+  }
+
+  #suggestion .container .card h4 {
+    font-size: 1rem;
+  }
+
+}
+
+/* Suggestion section style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  #suggestion {
+    padding: 0 4rem;
+  }
+
+  #suggestion .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  #suggestion .container .card div img {
+    height: 17rem;
+  }
+
+  #suggestion .container .card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  #suggestion .container .card h4 {
+    font-size: 1.1rem;
+  }
+
+  #suggestion > a {
+    width: auto;
+    padding: 0.8rem 2.2rem;
+  }
+
+  #suggestion .container .card .bg a {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* Suggestion section style X large screen */
+@media (min-width: 1200px) {
+
+  #suggestion {
+    padding: 0 4rem;
+  }
+
+  #suggestion .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  #suggestion .container .card div img {
+    height: 20rem;
+  }
+
+  #suggestion .container .card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  #suggestion .container .card h4 {
+    font-size: 1.1rem;
+  }
+
+  #suggestion > a {
+    width: auto;
+    padding: 0.8rem 2.2rem;
+  }
+
+  #suggestion .container .card .bg a {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+}
+
+/* --------- ends of suggestion section ---------*/
 
 /* Footer style starts */
 

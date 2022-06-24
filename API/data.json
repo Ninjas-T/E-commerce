@@ -1,5 +1,6 @@
 [
   {
+    "category": "Plant pots",
     "items": [
       {
         "img-src": "https://i.ibb.co/nf93YNY/5a37d136-c321-475f-b281-30fc40c7412a-40f10ce7320a016aedc72daf70cf0850.jpg",
@@ -151,6 +152,7 @@
     ]
   },
   {
+    "category": "Ceramics",
     "items": [
       {
         "img-src": "https://i.ibb.co/0f8jKwC/f68fd0a01452f9cdc8dfb6d5cdfe9764.jpg",
@@ -295,6 +297,7 @@
     ]
   },
   {
+    "category": "Tables",
     "items": [
       {
         "img-src": "https://i.ibb.co/z5gbVnm/stockholm-nest-of-tables-set-of-2-walnut-veneer-0735683-pe740088-s5.jpg",
@@ -439,6 +442,7 @@
     ]
   },
   {
+    "category": "Chairs",
     "items": [
       {
         "img-src": "https://i.ibb.co/yq0jPNN/eecf74a1aa9bd48a9c4fb401303dde39.jpg",
@@ -583,6 +587,7 @@
     ]
   },
   {
+    "category": "Crockery",
     "items": [
       {
         "img-src": "https://i.ibb.co/6Z4LN1D/s-l500.jpg",
@@ -727,6 +732,7 @@
     ]
   },
   {
+    "category": "Cutlery",
     "items": [
       {
         "img-src": "https://i.ibb.co/QXxgsmM/e9faf9ff37180e4fed9445cb12eff55a.jpg",
