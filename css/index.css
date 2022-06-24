@@ -999,6 +999,143 @@ nav ul li a::after {
 }
 
 /*Sign up section style ends*/
+/*Blog section style starts*/
+#blog {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.blog-details {
+  padding: 3rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--dark-primary);
+}
+
+.blog-details h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  padding-right: 5rem;
+}
+
+.blog-details p {
+  font-size: 0.8rem;
+}
+
+.blog-details :nth-child(2) {
+  padding-bottom: 1.5rem;
+}
+
+.blog-details :nth-child(3) {
+  padding-bottom: 5rem;
+}
+
+.blog-details button {
+  width: 100%;
+  align-self: center;
+  border: 0;
+  padding: 1.1rem 2rem;
+  font-size: 0.9rem;
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+}
+
+.blog-details button:hover {
+  color: var(--white);
+  background-color: var(--dark-primary);
+  transition: all 0.25s ease-in-out;
+}
+
+#blog img {
+  width: 100%;
+}
+
+/*Blog section media query for large screen tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #blog {
+    flex-direction: row;
+    height: 370px;
+  }
+
+  #blog img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog-details {
+    padding: 0 2rem;
+    height: 100%;
+  }
+
+  .blog-details :nth-child(3) {
+    padding-bottom: 2rem;
+  }
+
+  .blog-details button {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+/*Blog section media query for large screen tablet*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #blog {
+    flex-direction: row;
+    height: 350px;
+  }
+
+  #blog img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog-details {
+    padding: 3rem 2rem 1rem;
+  }
+
+  .blog-details :nth-child(3) {
+    padding-bottom: 2rem;
+  }
+
+  .blog-details button {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+/*Blog section media query for X large screen tablet*/
+@media (min-width: 1200px) {
+  #blog {
+    flex-direction: row;
+    height: 550px;
+    gap: 2rem;
+  }
+
+  #blog img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog-details {
+    padding: 4rem 4rem 1rem 6rem;
+  }
+
+  .blog-details :nth-child(3) {
+    padding-bottom: 8rem;
+  }
+
+  .blog-details button {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+/*Blog section style ends*/
 /*Footer section style starts*/
 footer {
   background-color: var(--dark-primary);
