@@ -26,6 +26,8 @@ let dropDown = document.querySelector('.list');
 let catButton = document.querySelector('#categories');
 let main = document.querySelector('main');
 let viewCollection = document.querySelector('#view-collection button');
+let searchInput = document.querySelector('.search input');
+console.log(searchInput);
 let picked = 'All';
 
 catButton.addEventListener('click', showList);
@@ -35,10 +37,12 @@ dropDown.addEventListener('click', pickCategory);
 dropDown.addEventListener('mouseenter', hoverList);
 dropDown.addEventListener('mouseleave', removeHoverlist);
 viewCollection.addEventListener('click', showAll);
+searchInput.addEventListener('keyup', search);
 
 fetch('../API/data.json')
   .then((data) => data.json())
   .then((data) => {
+    viewCollection.parentElement.style.display = 'flex';
     let products = [];
     let itemSection = document.createElement('section');
 
@@ -86,11 +90,15 @@ fetch('../API/data.json')
   });
 
 function hoverList() {
-  dropDown.style.display = 'block';
+  if (screen.width >= 1000) {
+    dropDown.style.display = 'block';
+  }
 }
 
 function removeHoverlist() {
-  dropDown.style.display = 'none';
+  if (screen.width >= 1000) {
+    dropDown.style.display = 'none';
+  }
 }
 
 function overlay(e) {
@@ -102,12 +110,16 @@ function overlay(e) {
 
 function showOverlay(e) {
   let over = e.target.children[1];
-  over.style.transform = 'rotateX(0deg)';
+  if (screen.width >= 1000) {
+    over.style.transform = 'rotateX(0deg)';
+  }
 }
 
 function removeOverlay(e) {
   let over = e.target.children[1];
-  over.style.transform = 'rotateX(90deg)';
+  if (screen.width >= 1000) {
+    over.style.transform = 'rotateX(90deg)';
+  }
 }
 
 function showList(e) {
@@ -125,6 +137,7 @@ function viewDetails(e) {
 }
 
 function pickCategory(e) {
+  viewCollection.parentElement.style.display = 'flex';
   let category = e.target.textContent;
   picked = category;
   let itemSection = document.createElement('section');
@@ -225,11 +238,12 @@ function pickCategory(e) {
         });
       });
   }
+  viewCollection.textContent = 'View Collection';
   main.childNodes[5].replaceWith(itemSection);
 }
 
 function showAll(e) {
-  console.log(e.target.textContent);
+  viewCollection.parentElement.style.display = 'flex';
   let itemSection = document.createElement('section');
 
   if (e.target.textContent == 'View Collection') {
@@ -431,4 +445,122 @@ function showAll(e) {
 
   window.scrollTo(0, 200);
   main.childNodes[5].replaceWith(itemSection);
+}
+
+function search(e) {
+  let found = 0;
+
+  fetch('../API/data.json')
+    .then((data) => data.json())
+    .then((data) => {
+      let products = [];
+      let itemSection = document.createElement('section');
+
+      data.forEach((ele) => {
+        products.push(...ele['items']);
+      });
+
+      if (searchInput.value.length === 0) {
+        let products = [];
+        itemSection.classList.remove('message');
+
+        data.forEach((ele) => {
+          products.push(ele['items'][6]);
+          products.push(ele['items'][15]);
+        });
+
+        products.forEach((item, i) => {
+          let card = document.createElement('div');
+          card.classList = 'card';
+          itemSection.appendChild(card);
+
+          let imgDiv = document.createElement('div');
+          imgDiv.addEventListener('click', overlay);
+          imgDiv.addEventListener('mouseenter', showOverlay);
+          imgDiv.addEventListener('mouseleave', removeOverlay);
+
+          let image = document.createElement('img');
+          image.src = item['img-src'];
+          imgDiv.appendChild(image);
+
+          let layer = document.createElement('div');
+          layer.classList = 'overlay';
+          let btn = document.createElement('button');
+          btn.textContent = 'View Details';
+          btn.addEventListener('click', viewDetails);
+          layer.appendChild(btn);
+          imgDiv.appendChild(layer);
+
+          card.appendChild(imgDiv);
+
+          let detailsDiv = document.createElement('div');
+          card.appendChild(detailsDiv);
+          let h3 = document.createElement('h3');
+          h3.textContent = item['title'];
+          detailsDiv.appendChild(h3);
+
+          let h4 = document.createElement('h4');
+          h4.textContent = `$${item['price']}`;
+
+          detailsDiv.appendChild(h4);
+        });
+
+        viewCollection.parentElement.style.display = 'flex';
+      } else {
+        products.forEach((item) => {
+          itemSection.classList.remove('message');
+          viewCollection.parentElement.style.display = 'none';
+          if (
+            item['title']
+              .toLowerCase()
+              .includes(searchInput.value.toLowerCase())
+          ) {
+            found = 1;
+
+            let card = document.createElement('div');
+            card.classList = 'card';
+            itemSection.appendChild(card);
+
+            let imgDiv = document.createElement('div');
+            imgDiv.addEventListener('click', overlay);
+            imgDiv.addEventListener('mouseenter', showOverlay);
+            imgDiv.addEventListener('mouseleave', removeOverlay);
+
+            let image = document.createElement('img');
+            image.src = item['img-src'];
+            imgDiv.appendChild(image);
+
+            let layer = document.createElement('div');
+            layer.classList = 'overlay';
+            let btn = document.createElement('button');
+            btn.textContent = 'View Details';
+            btn.addEventListener('click', viewDetails);
+            layer.appendChild(btn);
+            imgDiv.appendChild(layer);
+
+            card.appendChild(imgDiv);
+
+            let detailsDiv = document.createElement('div');
+            card.appendChild(detailsDiv);
+            let h3 = document.createElement('h3');
+            h3.textContent = item['title'];
+            detailsDiv.appendChild(h3);
+
+            let h4 = document.createElement('h4');
+            h4.textContent = `$${item['price']}`;
+
+            detailsDiv.appendChild(h4);
+          }
+        });
+      }
+
+      if (!found && searchInput.value.length !== 0) {
+        itemSection.classList = 'message';
+        let message = document.createElement('p');
+        message.textContent = 'No Results Found';
+        itemSection.appendChild(message);
+      }
+
+      main.childNodes[5].replaceWith(itemSection);
+    });
 }
