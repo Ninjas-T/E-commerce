@@ -98,6 +98,8 @@ fetch(`../API/data.json`)
       products.push(item);
       localStorage.setItem(`purchase`, JSON.stringify(products));
     }
+
+    window.location.href = '../html/cart.html';
   });
   // ============== Add to cart button click events ends ==============
 
@@ -113,6 +115,7 @@ fetch(`../API/data.json`)
         let cardImageDiv = document.createElement(`div`);
         let divImage = document.createElement(`img`);
         divImage.src = ele[`items`][random][`img-src`];
+        divImage.setAttribute(`alt`, `${ele[`items`][random][`title`]}`);
         let divBg = document.createElement(`div`);
         divBg.classList = `bg`;
         let bgAnchor = document.createElement(`a`);

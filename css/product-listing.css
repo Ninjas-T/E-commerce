@@ -234,7 +234,7 @@ nav ul li a::after {
 
 #details > div:nth-child(1) img {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
 }
 
 #details > div:nth-child(2) {
@@ -396,7 +396,7 @@ nav ul li a::after {
   }
 
   #details > div:nth-child(1) img {
-    height: 35rem;
+    height: 40rem;
   }
 }
 
@@ -456,7 +456,7 @@ nav ul li a::after {
   }
 
   #details > div:nth-child(1) img {
-    height: 42rem;
+    height: 35rem;
   }
 }
 
@@ -517,7 +517,7 @@ nav ul li a::after {
   } 
 
   #details > div:nth-child(1) img {
-    height: 45rem;
+    height: 38rem;
   }
 
 }
@@ -557,8 +557,6 @@ nav ul li a::after {
   justify-content: center;
   align-items: center;
 }
-
-
 
 #suggestion .container .bg {
   position: absolute;
@@ -728,6 +726,147 @@ nav ul li a::after {
 }
 
 /* --------- ends of suggestion section ---------*/
+
+/* --------- starts of sign up section ---------*/
+
+#signup {
+  background-color: var(--light-grey);
+}
+
+#signup .container {
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signup .container > * {
+  width: 100%;
+}
+
+#signup .container h1 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#signup .container p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 1rem 0 2.5rem;
+}
+
+#signup .container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup .container div input {
+  background-color: var(--light-grey);
+  width: 65%;
+  padding: 1rem 1.5rem;
+  border: 0;
+  outline: 0;
+}
+
+#signup .container div input::placeholder {
+  color: var(--border-dark);
+}
+
+#signup .container div button {
+  width: 35%;
+  padding: 1rem 0;
+  border: 0;
+  outline: 0;
+  background-color: var(--dark-primary);
+  color: var(--light-grey);
+  transition: all 0.2s ease-in-out;
+}
+
+#signup .container div button:hover {
+  background-color: #404358;
+}
+
+/*  signup section style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #signup .container {
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+
+  #signup .container p {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+
+  #signup .container div {
+    width: 50%;
+  }
+}
+
+/* signup section style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  #signup {
+    padding: 3rem 4rem;
+  }
+
+  #signup .container {
+    padding: 2rem 4rem;
+    text-align: center;
+  }
+
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+
+  #signup .container p {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+
+  #signup .container div {
+    width: 50%;
+  }
+
+}
+
+/* signup section style X large screen */
+@media (min-width: 1200px) {
+
+  #signup {
+    padding: 3rem 4rem;
+  }
+
+  #signup .container {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+
+  #signup .container p {
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
+  #signup .container div {
+    width: 30%;
+  }
+
+}
+
+/* --------- ends of sign up section ----------*/
 
 /* Footer style starts */
 
