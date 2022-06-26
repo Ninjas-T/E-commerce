@@ -17,7 +17,7 @@ function navDisplay(e) {
     nav.style.display = 'block';
     setTimeout(() => {
       nav.classList.remove('slide-in');
-    }, 1500);
+    }, 500);
   }
 }
 // ================== categories section ===============
