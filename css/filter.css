@@ -68,10 +68,10 @@ nav {
 }
 
 .slide-in {
-  animation: slide 1s forwards;
+  animation: slide 0.5s forwards;
 }
 .slide-out {
-  animation: slideOut 1s forwards;
+  animation: slideOut 0.5s forwards;
 }
 
 @keyframes slide {
@@ -203,7 +203,6 @@ main .filter-lists .filters {
 main .filter-lists .filters li {
   margin: 0.5rem;
   position: relative;
-  /* padding: 0.5rem; */
   cursor: pointer;
   color: var(--dark-primary);
 }
@@ -249,13 +248,19 @@ main .filter-lists .filters .list li:hover {
   padding: 0.8rem;
   outline: none;
   margin-right: 0.3rem;
-  border: solid var(--border-dark) 0.5px;
   font-size: 0.9rem;
   font-weight: 400;
+  border: 0;
+  box-shadow: 0 0 5px 0 #ddd;
 }
 
 .filter-lists .search input::placeholder {
   font-weight: 400;
+}
+
+.filter-lists .search input:focus::placeholder {
+  color: transparent;
+  transition: all 0.1s ease-in-out;
 }
 
 .filter-lists .search i {
@@ -350,7 +355,7 @@ main section .card div:nth-child(2) h3 {
 }
 
 main section .card div:nth-child(2) h4 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 main section .card div:nth-child(2) h3,
@@ -387,10 +392,16 @@ main .message {
   main .filter-lists .filters {
     font-size: 1rem;
   }
+
+  main .filter-lists .filters li {
+    padding: 0.5rem;
+  }
+
   .filter-lists .search input::placeholder {
     font-size: 1rem;
     padding: 1rem;
   }
+
   main section .card div:nth-child(1) {
     height: 16rem;
   }
@@ -479,8 +490,18 @@ main .message {
     width: 30%;
   }
   /* ---- end of filter section ----- */
+
+  main .filter-lists .filters li {
+    padding: 0.7rem;
+  }
+
   main section .card div:nth-child(1) {
     height: 18rem;
+  }
+
+  main section .card div:nth-child(2) h3,
+  h4 {
+    font-size: 0.9rem;
   }
 }
 
@@ -501,12 +522,16 @@ main .message {
     padding: 1rem 5rem;
   }
 
+  main .filter-lists .filters li {
+    padding: 0.7rem 1rem;
+  }
+
   main section {
     padding: 1rem 4rem;
   }
 
   main section .card {
-    width: 21%;
+    width: 23%;
   }
 
   main section .card div:nth-child(1) {
@@ -519,14 +544,16 @@ main .message {
   }
   main section .card div:nth-child(2) h3,
   h4 {
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1400px) {
   main section .card div:nth-child(1) {
     height: 20rem;
+  }
+  main section .card {
+    width: 21%;
   }
 }
 /* ---------- end of filter section --------- */
