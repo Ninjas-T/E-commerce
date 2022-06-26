@@ -539,13 +539,13 @@ nav ul li a::after {
   font-weight: 600;
 }
 
-#new-products .card >div:nth-child(1) {
+#new-products .card>div:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#new-products .card >div:nth-child(2) {
+#new-products .card>div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -567,10 +567,12 @@ nav ul li a::after {
 }
 
 #new-products .card .bg a {
-  font-size: 1rem;
-  color: black;
-  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: var(--dark-primary);
+  padding: 0.8rem 1rem;
   background-color: var(--light-grey);
+  cursor: pointer;
 }
 
 #new-products .card .bg a:hover {
@@ -594,7 +596,7 @@ nav ul li a::after {
   background-color: var(--dark-primary);
   color: var(--white);
   transition: all 0.2s ease-in-out;
-} 
+}
 
 
 /*New products section style for mediam screen tablet*/
@@ -603,6 +605,7 @@ nav ul li a::after {
     row-gap: 4rem;
     column-gap: 4rem;
   }
+
   #new-products .card img {
     height: 18rem;
   }
@@ -615,7 +618,7 @@ nav ul li a::after {
   }
 
   #new-products .card img {
-    height: 14rem;
+    height: 17rem;
   }
 
   #new-products .container {
@@ -652,6 +655,7 @@ nav ul li a::after {
 
   #new-products .card .bg a {
     padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -708,13 +712,13 @@ nav ul li a::after {
   font-weight: 600;
 }
 
-#popular-products .card >div:nth-child(1) {
+#popular-products .card>div:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#popular-products .card >div:nth-child(2) {
+#popular-products .card>div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -740,10 +744,12 @@ nav ul li a::after {
 }
 
 #popular-products .card .bg a {
-  font-size: 1rem;
-  padding: 0.8rem;
-  color: black;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: var(--dark-primary);
+  padding: 0.8rem 1rem;
   background-color: var(--light-grey);
+  cursor: pointer;
 }
 
 #popular-products .card .bg a:hover {
@@ -772,7 +778,7 @@ nav ul li a::after {
 /*Popular products section style for mediam screen tablet*/
 @media (min-width: 768px) and (max-width: 991.98px) {
   #popular-products .container .card {
-    width: 100%;
+    width: 250px;
   }
 }
 
@@ -818,195 +824,157 @@ nav ul li a::after {
   }
 
   #popular-products .card img {
-    height: 18rem;
+    height: 20rem;
   }
 
   #popular-products>a {
     width: auto;
     font-size: 0.85rem;
   }
+
   #popular-products .card .bg a {
     padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 }
 
 /*Popular products section style ends*/
 /*Sign up section style starts*/
-#sign-up {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 3rem 2rem;
-}
-
-#sign-up .container {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-#sign-up .join-us {
-  width: 100%;
-  padding-bottom: 3.5rem;
-}
-
-#sign-up .join-us h4 {
-  color: var(--dark-primary);
-  font-size: 1.3rem;
-  font-weight: 400;
-  padding-bottom: 1rem;
-}
-
-#sign-up .join-us p {
-  width: 100%;
-  color: var(--dark-primary);
-  font-size: 0.8rem;
-}
-
-#sign-up form {
-  display: flex;
-  align-self: center;
-}
-
-#sign-up form input {
-  border: 0;
-  padding: 1rem;
+#signup {
   background-color: var(--light-grey);
 }
 
-#sign-up form input::placeholder {
-  opacity: 0.3;
-  font-size: 0.7rem;
+#signup .container {
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#sign-up form button {
-  font-size: 0.9rem;
-  font-weight: 200;
-  border: 0;
-  padding: 1rem;
-  color: var(--white);
-  background-color: var(--dark-primary);
+#signup .container>* {
   width: 100%;
 }
 
-/*Sign up section media query for mediam screen tablet*/
+#signup .container h1 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#signup .container p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 1rem 0 2.5rem;
+}
+
+#signup .container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup .container div input {
+  background-color: var(--light-grey);
+  width: 65%;
+  padding: 1rem 1.5rem;
+  border: 0;
+  outline: 0;
+}
+
+#signup .container div input::placeholder {
+  color: var(--border-dark);
+}
+
+#signup .container div button {
+  width: 35%;
+  padding: 1rem 0;
+  border: 0;
+  outline: 0;
+  background-color: var(--dark-primary);
+  color: var(--light-grey);
+  transition: all 0.2s ease-in-out;
+}
+
+#signup .container div button:hover {
+  background-color: #404358;
+}
+
+/*  signup section style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  #sign-up .container {
+  #signup .container {
+    padding: 2rem 3rem;
     text-align: center;
-    align-items: center;
   }
 
-  #sign-up .join-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.4rem;
   }
 
-  #sign-up .join-us h4 {
-    font-size: 1.5rem;
+  #signup .container p {
+    width: 50%;
+    font-size: 0.8rem;
   }
 
-  #sign-up .join-us p {
-    width: 45%;
+  #signup .container div {
+    width: 50%;
   }
 }
 
-/*Sign up section media query for large screen tablet*/
+/* signup section style large screen laptop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  #sign-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--light-grey);
+
+  #signup {
+    padding: 3rem 4rem;
   }
 
-  #sign-up .container {
-    width: 95%;
-    height: 360px;
-    background-color: var(--white);
-    justify-content: center;
+  #signup .container {
+    padding: 2rem 4rem;
     text-align: center;
-    align-items: center;
   }
 
-  #sign-up .join-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.8rem;
   }
 
-  #sign-up .join-us h4 {
-    font-size: 1.7rem;
+  #signup .container p {
+    width: 50%;
+    font-size: 0.8rem;
   }
 
-  #sign-up .join-us p {
-    width: 40%;
+  #signup .container div {
+    width: 50%;
   }
 
-  #sign-up form input {
-    padding: 1rem 4rem 0.85rem 1.5rem;
-  }
-
-  #sign-up form input::placeholder {
-    opacity: 0.3;
-  }
-
-  #sign-up form button {
-    padding: 1rem 2rem;
-  }
 }
 
-/*Sign up section media query for X large screen tablet*/
+/* signup section style X large screen */
 @media (min-width: 1200px) {
-  #sign-up {
-    padding: 3rem 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--light-grey);
+
+  #signup {
+    padding: 3rem 4rem;
   }
 
-  #sign-up .container {
+  #signup .container {
     padding: 4rem 0;
-    background-color: var(--white);
     text-align: center;
-    justify-content: center;
-    align-items: center;
   }
 
-  #sign-up .join-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
+  #signup .container h1 {
+    width: 70%;
+    font-size: 1.8rem;
   }
 
-  #sign-up .join-us h4 {
-    font-size: 1.7rem;
+  #signup .container p {
+    width: 30%;
+    font-size: 0.8rem;
   }
 
-  #sign-up .join-us p {
-    width: 80%;
+  #signup .container div {
+    width: 30%;
   }
 
-  #sign-up form input {
-    padding: 0.85rem 4rem 0.85rem 1.5rem;
-  }
-
-  #sign-up form input::placeholder {
-    opacity: 0.3;
-  }
-
-  #sign-up form button {
-    padding: 0.85rem 2rem;
-  }
 }
 
 /*Sign up section style ends*/
