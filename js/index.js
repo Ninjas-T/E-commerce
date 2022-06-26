@@ -61,10 +61,14 @@ fetch(`./API/data.json`)
       textDiv.appendChild(span);
 
       card.addEventListener("mouseenter", () => {
+        if (screen.width > 1000) {
         overlayDiv.style.transform = `rotateX(0deg)`;
+        }
       });
       card.addEventListener("mouseleave", () => {
+        if (screen.width > 1000) {
         overlayDiv.style.transform = `rotateX(90deg)`;
+        }
       });
       card.addEventListener("click", () => {
         if (overlayDiv.style.transform === `rotateX(0deg)`) {
@@ -110,12 +114,16 @@ fetch(`./API/data.json`)
       span.textContent =  `$${data[i][`items`][random][`price`]}`
       textDiv.appendChild(span);
   
-      card.addEventListener('mouseenter', () =>{
-        overlayDiv.style.transform = `rotateX(0deg)`
-      })
-      card.addEventListener('mouseleave', () =>{
-        overlayDiv.style.transform = `rotateX(90deg)`
-      })
+      card.addEventListener("mouseenter", () => {
+        if (screen.width >= 1000) {
+        overlayDiv.style.transform = `rotateX(0deg)`;
+        }
+      });
+      card.addEventListener("mouseleave", () => {
+        if (screen.width >= 1000) {
+        overlayDiv.style.transform = `rotateX(90deg)`;
+        }
+      });
       card.addEventListener('click', () =>{
         if(overlayDiv.style.transform === `rotateX(0deg)`){
           overlayDiv.style.transform = `rotateX(90deg)`
