@@ -39,9 +39,18 @@
     </header>
       <main>
         <h2>Your shopping cart</h2>
+
+    <div id="empty-cart">
+      <img src="../images/emptyCart.png" alt="Empty Cart">
+      <h2>Your Cart Empty!</h2>
+      <p>You have no items in your shopping cart.<br>let's go buy something!</p>
+
+      <a href="../html/filter.html">Browse products</a>
+    </div>
+
+
         <section id="card-container">
-        
-          <div class="card">
+          <!-- <div class="card">
             <img  class ="card-img"src="../images/blog2.png" alt="ssss">   
             <div class="card-inner-div">
               <div class="title-description-container">
@@ -55,39 +64,25 @@
                   <p class="quantity-increase">+</p>
                   <p class="card-price">1</p>
                   <p  class="quantity-decrease">-</p>
+                 <i class="fa-solid fa-trash delete-item"></i>
+
                 </div>
-                    <p class="card-total"><span>total: $</span>85</p>
-                  </div>
+              <div class="card-total">
+                <p class="span-total">total:</p> <p class="total-price">$85</p>
               </div>
+
+                </div>
+              </div> -->
         
-        
-              <div class="card">
-                <img  class ="card-img"src="../images/blog2.png" alt="ssss">   
-                <div class="card-inner-div">
-                  <div class="title-description-container">
-    
-                 <h3 class="card-title">Graystone vase</h6>
-                  <p class="card-description">A timeless ceramic vase with 
-                    a tri color .</p>
-                    </div>
-    
-                    <div class="quantity-container">
-                      <p class="quantity-increase">+</p>
-                      <p class="card-price">1</p>
-                      <p  class="quantity-decrease">-</p>
-                    </div>
-                        <p class="card-total"><span>total: $</span>85</p>
-                      </div>
-                  </div>
         </section>
         <section id="subtotal">
-        <div id="subtotal-container"><p id="subtotal-text">Subtotal  <p id=subtotal-num><span>$</span>210</p></p>
+        <div id="subtotal-container"><p id="subtotal-text">Subtotal  <p id=subtotal-num>0</p></p>
         </div>
         <p id="taxes-and-shpping">Taxes and shipping are calculated at checkout</p>
         </section>
 
         
-        <button>Go to checkout</button>
+        <button id="btn-checkout">Go to checkout</button>
             </main>
 
 
