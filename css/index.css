@@ -539,13 +539,13 @@ nav ul li a::after {
   font-weight: 600;
 }
 
-#new-products .card >div:nth-child(1) {
+#new-products .card>div:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#new-products .card >div:nth-child(2) {
+#new-products .card>div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -596,7 +596,7 @@ nav ul li a::after {
   background-color: var(--dark-primary);
   color: var(--white);
   transition: all 0.2s ease-in-out;
-} 
+}
 
 
 /*New products section style for mediam screen tablet*/
@@ -605,6 +605,7 @@ nav ul li a::after {
     row-gap: 4rem;
     column-gap: 4rem;
   }
+
   #new-products .card img {
     height: 18rem;
   }
@@ -617,7 +618,7 @@ nav ul li a::after {
   }
 
   #new-products .card img {
-    height: 14rem;
+    height: 17rem;
   }
 
   #new-products .container {
@@ -711,13 +712,13 @@ nav ul li a::after {
   font-weight: 600;
 }
 
-#popular-products .card >div:nth-child(1) {
+#popular-products .card>div:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#popular-products .card >div:nth-child(2) {
+#popular-products .card>div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -777,7 +778,7 @@ nav ul li a::after {
 /*Popular products section style for mediam screen tablet*/
 @media (min-width: 768px) and (max-width: 991.98px) {
   #popular-products .container .card {
-    width: 100%;
+    width: 250px;
   }
 }
 
@@ -823,13 +824,14 @@ nav ul li a::after {
   }
 
   #popular-products .card img {
-    height: 18rem;
+    height: 20rem;
   }
 
   #popular-products>a {
     width: auto;
     font-size: 0.85rem;
   }
+
   #popular-products .card .bg a {
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -850,7 +852,7 @@ nav ul li a::after {
   align-items: center;
 }
 
-#signup .container > * {
+#signup .container>* {
   width: 100%;
 }
 
