@@ -149,11 +149,15 @@ fetch(`../API/data.json`)
         })
 
         containerCard.addEventListener(`mouseenter`, () => {
+          if (screen.width > 1000) {
             divBg.style.transform = `rotateX(0)`;
+          }
         })
 
         containerCard.addEventListener(`mouseleave`, () => {
-          divBg.style.transform = `rotateX(90deg)`;
+          if (screen.width > 1000) {
+            divBg.style.transform = `rotateX(90deg)`;
+          }
         })
       }
     }

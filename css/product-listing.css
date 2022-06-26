@@ -598,15 +598,18 @@ nav ul li a::after {
   height: 12rem;
 }
 
+#suggestion .container .card > div:nth-child(2) {
+  padding: 0 0.5rem 1.5rem;
+}
+
 #suggestion .container .card h3 {
-  font-weight: 400;
   margin: 0.5rem 0;
-  font-size: 0.8rem;
-  text-transform: capitalize;
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 #suggestion .container .card h4 {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 0.8rem;
 }
 
@@ -669,11 +672,11 @@ nav ul li a::after {
 
   #suggestion .container .card h3 {
     margin: 1rem 0 0.5rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   #suggestion .container .card h4 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   #suggestion > a {
@@ -726,6 +729,133 @@ nav ul li a::after {
 }
 
 /* --------- ends of suggestion section ---------*/
+
+/* --------- starts of information section ---------*/
+
+#information {
+  margin: 2rem 0;
+  color: var(--dark-primary);
+}
+
+#information h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+#information h4 span::before {
+  content: "\A";
+  white-space: pre;
+}
+
+#information .container {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#information .card {
+  margin: 1.2rem 0;
+}
+
+#information .card i {
+  font-size: 1.2rem;
+}
+
+#information .card h5 {
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/*Information style section ends*/
+
+/*  Information style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #information .container {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #information .card {
+    margin: 1rem 2rem;
+    width: 40%;
+  }
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+}
+
+/* Information style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #information {
+    margin: 0;
+    padding: 5rem 3rem;
+  }
+
+  #information .container {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #information .card {
+    width: calc(90% / 4);
+  }
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+}
+
+/* Information style X large screen */
+@media (min-width: 1200px) {
+  #information {
+    margin: 5rem;
+  }
+
+  #information .container {
+    padding: 0;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #information .card {
+    width: calc(95% / 4);
+  }
+
+  #information .card i {
+    font-size: 0.85rem;
+  }
+
+  #information .card h5 {
+    font-size: 1rem;
+  }
+
+  #information .card p {
+    font-size: 0.85rem;
+  }
+
+  #information h4 {
+    text-align: center;
+  }
+
+  #information h4 span::before {
+    white-space: normal;
+  }
+}
+
+/* --------- ends of information section ---------*/
 
 /* --------- starts of sign up section ---------*/
 
