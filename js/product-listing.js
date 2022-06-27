@@ -34,6 +34,8 @@ let addToCartBtn = document.querySelector(`.amount button`);
 let itemPrice = document.querySelector(`.name span`);
 let amountNumber = document.querySelector(`.number`);
 let itemName = document.querySelector(`.name h1`);
+let message = document.querySelector(`.message`);
+let messageSpan = document.querySelector(`.message span`);
 let dataArray = [];
 
 amountPlus.addEventListener(`click`, () => {
@@ -98,8 +100,13 @@ fetch(`../API/data.json`)
       products.push(item);
       localStorage.setItem(`purchase`, JSON.stringify(products));
     }
+    messageSpan.classList.add(`vanishspan`);
+    message.classList.add(`vanish`);
+    setTimeout (() => {
+      message.classList.remove(`vanish`);
+      messageSpan.classList.remove(`vanishspan`);
+    }, 2000);
 
-    window.location.href = '../html/cart.html';
   });
   // ============== Add to cart button click events ends ==============
 

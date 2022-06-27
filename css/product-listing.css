@@ -219,6 +219,91 @@ nav ul li a::after {
 }
 /* --------- end of header section ---------- */
 
+.message {
+  position: fixed;
+  right: -100%;
+  padding: 0.8rem 3rem;
+  background-color: var(--dark-primary);
+  box-shadow: 0 0 10px 0 #ccc;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  top: 0;
+}
+
+.message p {
+  color: var(--white);
+}
+
+.message span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #a3a3d3;
+  z-index: 1500;
+}
+
+.vanish {
+  animation: vanish 2s ease-in-out;
+  right: 0;
+  top: 0;
+}
+
+.vanishspan {
+  animation: complete 2s ease-in-out;
+}
+
+/* @keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+} */
+
+@keyframes complete {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/*  message style mediam screen tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .message {
+    padding: 1.5rem 3rem;
+  }
+}
+
+/* message style large screen laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .message {
+    padding: 1rem 3rem;
+    width: auto;
+  }
+
+  .vanish {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .message {
+    padding: 1rem 3rem;
+    width: auto;
+  }
+
+  .vanish {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
 /* --------- starts of details section ---------*/
 
 #details {
