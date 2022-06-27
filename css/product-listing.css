@@ -254,11 +254,13 @@ nav ul li a::after {
   text-transform: capitalize;
   font-weight: 400;
   font-size: 1.5rem;
+  color: var(--dark-primary);
 }
 
 #details .name span {
   font-size: 1.2rem;
   font-weight: 300;
+  color: var(--dark-primary);
 }
 
 #details .description {
@@ -270,15 +272,18 @@ nav ul li a::after {
 #details .description h3 {
   font-weight: 400;
   text-transform: capitalize;
+  color: var(--dark-primary);
 }
 
 #details .description p {
   font-weight: 300;
+  color: var(--dark-primary);
 }
 
 #details .description ul {
   padding: 1rem 2rem;
   font-weight: 300;
+  color: var(--dark-primary);
 }
 
 #details .hwd {
@@ -290,6 +295,7 @@ nav ul li a::after {
 #details .hwd h3 {
   text-transform: capitalize;
   font-weight: 400;
+  color: var(--dark-primary);
 }
 
 #details .hwd > div {
@@ -349,6 +355,7 @@ nav ul li a::after {
 #details .amount h3 {
   text-transform: capitalize;
   font-weight: 400;
+  color: var(--dark-primary);
 }
 
 #details .amount > div {
@@ -372,6 +379,7 @@ nav ul li a::after {
 #details .amount div span {
   cursor: pointer;
   opacity: 0.4;
+  color: var(--dark-primary);
 }
 
 #details > div:nth-child(2) button {
@@ -538,6 +546,7 @@ nav ul li a::after {
 
 #suggestion h1 {
   font-weight: 400;
+  color: var(--dark-primary);
 }
 
 #suggestion .container {
@@ -585,6 +594,7 @@ nav ul li a::after {
   background-color: var(--light-grey);
   border: 0;
   cursor: pointer;
+  color: var(--dark-primary);
 }
 
 #suggestion .container .card .bg a:hover {
@@ -606,11 +616,13 @@ nav ul li a::after {
   margin: 0.5rem 0;
   font-size: 0.7rem;
   font-weight: 400;
+  color: var(--dark-primary);
 }
 
 #suggestion .container .card h4 {
   font-weight: 600;
   font-size: 0.8rem;
+  color: var(--dark-primary);
 }
 
 #suggestion > a {
@@ -760,12 +772,14 @@ nav ul li a::after {
 
 #information .card i {
   font-size: 1.2rem;
+  color: var(--dark-primary);
 }
 
 #information .card h5 {
   padding: 0.6rem 0;
   font-size: 1.2rem;
   font-weight: 400;
+  color: var(--dark-primary);
 }
 
 /*Information style section ends*/
@@ -878,12 +892,14 @@ nav ul li a::after {
 #signup .container h1 {
   font-weight: 400;
   font-size: 1.1rem;
+  color: var(--dark-primary);
 }
 
 #signup .container p {
   font-weight: 300;
   font-size: 0.8rem;
   margin: 1rem 0 2.5rem;
+  color: var(--dark-primary);
 }
 
 #signup .container div {
