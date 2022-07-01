@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -121,7 +121,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   background-color: #e4e0f1;
@@ -259,8 +259,139 @@ nav ul li a::after {
 
 /* service section style end */
 
+/* blogs section style start */
+#first-blog,
+#second-blog {
+  display: flex;
+  flex-direction: column;
+}
+#first-blog .inf .blog-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 3rem 5.75rem 0.75rem 1.5rem;
+  color: var(--dark-primary);
+}
+#first-blog .inf p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0.75rem 1.5rem 4rem 1.5rem;
+  line-height: 1.3rem;
+  color: var(--primary);
+}
+#first-blog .inf .contact {
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0rem 1.5rem 2.37rem 1.5rem;
+  padding: 1rem 7rem 1rem 7rem;
+}
+
+#first-blog img {
+  width: 100%;
+  margin-bottom: -0.438rem;
+}
+#second-blog img {
+  width: 100%;
+}
+
+#second-blog .inf .blog-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 3rem 5.75rem 0.75rem 1.5rem;
+  color: var(--dark-primary);
+}
+#second-blog .inf p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0.75rem 1.5rem 4rem 1.5rem;
+  line-height: 1.3rem;
+  color: var(--primary);
+}
+#second-blog .inf .contact {
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0rem 1.5rem 6.9rem 1.5rem;
+  padding: 1rem 7rem 1rem 7rem;
+}
+/* start media queries for service blogs in about page */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #first-blog .inf .contact {
+    width: 45%;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #second-blog .inf .contact {
+    width: 45%;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media (min-width: 992px)  {
+  #first-blog .inf .contact {
+    width: 30%;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #second-blog .inf .contact {
+    width: 30%;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #first-blog,
+  #second-blog {
+    display: flex;
+    flex-direction: row;
+  }
+#first-blog .inf .blog-title {
+  margin-top:4.5rem;
+
+}
+
+#second-blog .inf .blog-title {
+  margin-top:4.5rem;
+}
 
 
+  #first-blog img {
+    width: 50%;
+    margin-bottom: -0.438rem;
+  }
+  #second-blog img {
+    width: 50%;
+    margin-top: 0.5rem;
+  }
+  #first-blog .inf p {
+    font-size: 1rem;
+    padding-top: 1.7rem;
+  }
+  #second-blog .inf p {
+    font-size: 1rem;
+    padding-top: 1.7rem;
+
+  }
+
+  #first-blog .inf .contact {
+    width: 30%;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 12rem;
+  }
+  #second-blog .inf .contact {
+    width: 30%;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 12rem;
+  }
+}
+
+/* end media queries for blogs section in about page */
+
+/* blogs section style end  */
 
 /* Footer style starts */
 
@@ -371,11 +502,9 @@ footer .copy hr {
 
 /*  Footer style mediam screen tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
   footer .container .social ul li {
     justify-content: flex-start;
   }
-  
 }
 
 /* Footer style large screen laptop */
