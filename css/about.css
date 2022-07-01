@@ -393,6 +393,69 @@ nav ul li a::after {
 
 /* blogs section style end  */
 
+/* start style for information section */
+#info {
+  color: var(--dark-primary);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+#info .container {
+  display: flex;
+  flex-direction: column;
+}
+#info h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 2.5rem;
+}
+#info .card {
+  margin-bottom: 2.4rem;
+}
+#info .card i {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+#info .card h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+#info .card p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* start media quiery for information section */
+@media (min-width:992px) {
+  #info h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 3.5rem;
+  }
+  #info .container {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+  }
+  #info .container .card {
+    padding-right: 3.7rem;
+  }
+  #info .container .card h5 {
+    font-size:1.1rem;
+    
+  }
+  #info .container .card p {
+    font-size:0.8rem;
+  }
+
+
+  } 
+
+
+
+
+/* end style for information section */
+
 /* Footer style starts */
 
 footer {
